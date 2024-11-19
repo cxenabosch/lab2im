@@ -30,19 +30,19 @@ from lab2im.image_generator import ImageGenerator
 
 
 # label map to generate images from
-path_label_map = './data_example/brain_label_map.nii.gz'
+path_label_map = './lab2im/tutorials/data_example/brain_label_map.nii.gz'
 
 # general parameters
 n_examples = 5
-result_dir = './generated_images'
+result_dir = './lab2im/tutorials/generated_images'
 output_shape = None  # shape of the output images, obtained by randomly cropping the generated images
 
 # specify structures from which we want to generate
-generation_labels = './data_example/generation_labels.npy'
+generation_labels = './lab2im/tutorials/data_example/generation_labels.npy'
 # specify structures that we want to keep in the output label maps
-output_labels = './data_example/segmentation_labels.npy'
+output_labels = './lab2im/tutorials/data_example/segmentation_labels.npy'
 # we regroup structures into K classes, so that they share the same distribution for image generation
-generation_classes = './data_example/generation_classes.npy'
+generation_classes = './lab2im/tutorials/data_example/generation_classes.npy'
 
 # We specify here that we type of prior distributions to sample the GMM parameters.
 # By default prior_distribution is set to 'uniform', and in this example we want to change it to 'normal'.
@@ -52,9 +52,9 @@ prior_distribution = 'normal'
 # Therefore, the numpy array pointed by prior_means is of size (2, K), where K is the nummber of classes specified in
 # generation_classes. The first row of prior_means correspond to the means of the Gaussian priors, and the second row
 # correspond to standard deviations.
-prior_means = './data_example/prior_means.npy'
+prior_means = './lab2im/tutorials/data_example/prior_means.npy'
 # same as for prior_means, but for the standard deviations of the GMM.
-prior_stds = './data_example/prior_stds.npy'
+prior_stds = './lab2im/tutorials/data_example/prior_stds.npy'
 
 ########################################################################################################
 
